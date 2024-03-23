@@ -112,6 +112,7 @@
     neofetch
     wgnord
     wget
+    nil
   ];
   
   #fonts.packages = with pkgs; [
