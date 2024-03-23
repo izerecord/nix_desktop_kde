@@ -154,6 +154,7 @@
     };
     firefox.enable = true;
     steam.enable = true;
+    git.enable = true;
   };
   
   # Some programs need SUID wrappers, can be configured further or are
