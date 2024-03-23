@@ -6,7 +6,8 @@
 
 {
   imports =
-    [ # Include the results of the hardware scan.
+    [
+      # Include the results of the hardware scan.
       ./hardware-configuration.nix
     ];
 
@@ -16,7 +17,7 @@
 
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-  
+
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # Configure network proxy if necessary
@@ -115,7 +116,7 @@
     nil
     nixpkgs-fmt
   ];
-  
+
   #fonts.packages = with pkgs; [
   #  noto-fonts
   #  noto-fonts-cjk
@@ -128,20 +129,20 @@
   #  proggyfonts
   #];
   #fonts.fontconfig.enable = true;
-  
+
 
   fonts.enableDefaultPackages = true;
   fonts.packages = with pkgs; [
-    (pkgs.nerdfonts.override {fonts = ["JetBrainsMono" "Iosevka" "FiraCode"];})
+    (pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" "Iosevka" "FiraCode" ]; })
     #cm_unicode
     #corefonts
   ];
 
   fonts.fontconfig = {
     defaultFonts = {
-      monospace = ["JetBrainsMono Nerd Font Mono"];
-      sansSerif = ["JetBrainsMono Nerd Font"];
-      serif = ["JetBrainsMono Nerd Font"];
+      monospace = [ "JetBrainsMono Nerd Font Mono" ];
+      sansSerif = [ "JetBrainsMono Nerd Font" ];
+      serif = [ "JetBrainsMono Nerd Font" ];
     };
   };
 
@@ -158,7 +159,7 @@
     steam.enable = true;
     git.enable = true;
   };
-  
+
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
