@@ -113,6 +113,7 @@
     wgnord
     wget
     nil
+    nixpkgs-fmt
   ];
   
   #fonts.packages = with pkgs; [
